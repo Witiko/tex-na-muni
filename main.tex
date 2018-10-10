@@ -7,14 +7,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{hologo}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
 \usetheme[
   workplace=fi,
 ]{MU}
 \bibliographystyle{czechiso}
 
 % Rozšiřující makra
-\newcommand\odkaz[2]{\textcolor{mubeamer@base}{\href{#1}{#2}}}
-\providecommand\doi{doi:\textcolor{mubeamer@base}}
+\newcommand\odkaz[2]{\textcolor{mubeamer@base}{\uline{\href{#1}{#2}}}}
+\providecommand\doi[1]{doi:\odkaz{https://doi.org/#1}{#1}}
 
 \begin{document}
 
@@ -28,6 +30,11 @@
 
 \begin{frame}[plain]
 \maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=35pt] at (current page.south east) {
+      \includegraphics[width=65mm]{figs/ctanlion}
+    };
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Obsah}
@@ -55,7 +62,7 @@
 \item V~roce 2004 přibyla do šablony fithesis slovenská lokalizace.
 \item V~roce 2008 přibyla do druhé verze šablony, \alert{fithesis2, loga ostatních fakult MU}.
 \item V~roce 2013 přibyla do šablony fithesis2 podpora fontů Comenia zakoupených~FI.
-\item V~roce 2015 přibyla do třetí verze šablony, \alert{fithesis3~\cite{novotny15}, plná podpora směrnic jednotlivých fakult MU}. Zároveň vzniklo v~ISu \odkaz{https://is.muni.cz/auth/df/fithesis-sazba/}{diskuzní fórum uživatelů \TeX u}.
+\item V~roce 2015 přibyla do třetí verze šablony, \alert{\odkaz{https://www.fi.muni.cz/lemma/projekty/fithesis3}{fithesis3}~\cite{novotny15}, plná podpora směrnic jednotlivých fakult MU}. Zároveň vzniklo v~ISu \odkaz{https://is.muni.cz/auth/df/fithesis-sazba/}{diskuzní fórum uživatelů \TeX u}.
 \item V~roce 2016 přibyla do šablony fithesis3 podpora automatického generování bibliografických odkazů a~citací podle ČSN ISO 690:2013.
 \end{itemize}
 \end{frame}
@@ -69,9 +76,9 @@
 
 \begin{frame}{Šablona mubeamer}
 \begin{itemize}
-\item V~roce 2015 vznikla na FI \TeX ová \alert{šablona fibeamer pro sazbu prezentací k~obhajobám závěrečných prací na všech fakultách MU}.
+\item V~roce 2015 vznikla na FI \TeX ová \alert{šablona \odkaz{https://www.fi.muni.cz/lemma/projekty/fithesis3}{fibeamer} pro sazbu prezentací k~obhajobám závěrečných prací na všech fakultách MU}.
 \item V~roce 2016 přibyla do šablony fibeamer částečná podpora JVS MU 2016.
-\item V~roce 2017 vznikla ve spolupráci ÚVT MU a~FI \alert{šablona mubeamer pro sazbu prezentací podle JVS MU 2016 na 28 pracovištích MU}.
+\item V~roce 2017 vznikla ve spolupráci ÚVT MU a~FI \alert{šablona \odkaz{https://www.fi.muni.cz/lemma/projekty/mubeamer/}{mubeamer} pro sazbu prezentací podle JVS MU 2016 na 28 pracovištích MU}.
 \end{itemize}
 
 \begin{block}{Příklad}
@@ -93,7 +100,7 @@ Pracoviště, pro které je prezentace určena, lze snadno změnit bez zásahu d
 
 \begin{frame}{Šablona muletter}
 \begin{itemize}
-\item V~roce 2017 vznikla na FI \alert{šablona muletter pro sazbu dopisů podle JVS MU 2016 na 28 pracovištích MU}.
+\item V~roce 2017 vznikla na FI \alert{šablona \odkaz{https://www.fi.muni.cz/lemma/projekty/muletter/}{muletter} pro sazbu dopisů podle JVS MU 2016 na 28 pracovištích MU}.
 \end{itemize}
 
 \begin{block}{Příklad}
